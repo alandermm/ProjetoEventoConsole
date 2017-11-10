@@ -11,7 +11,7 @@ namespace ProjetoEventoConsole
             Console.Clear();
             int opcao = 9;
             do{
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("Digite a opção desejada:");
                 Console.WriteLine("1 - Shows");
                 Console.WriteLine("2 - Teatro");
@@ -22,24 +22,23 @@ namespace ProjetoEventoConsole
 
                 switch(opcao){
                     case 1: MenuShow(); break;
-                    case 2: Teatro(); break;
-                    case 3: Cinema(); break;
+                    case 2: MenuTeatro(); break;
+                    case 3: MenuCinema(); break;
                     case 9: Environment.Exit(0); break;
                     default: Console.WriteLine("Opção inválida!"); break;
                 }
             } while(opcao != 9 );
-            
         }
 
         static void MenuShow(){
             int opcao = 9;
             do{
-                Console.Clear();
+                //Console.Clear();
                 Console.WriteLine("Digite a opção desejada: ");
                 Console.WriteLine("1 - Cadastrar Show");
                 Console.WriteLine("2 - Pesquisar Show pelo Título");
                 Console.WriteLine("3 - Pesquisar Show pela Data");
-                Console.WriteLine("9 - Voltar");
+                Console.WriteLine("9 - Voltar\n");
 
                 Console.Write("Digite o número da opção: ");
                 opcao = Int16.Parse(Console.ReadLine());
@@ -72,17 +71,18 @@ namespace ProjetoEventoConsole
                         Console.WriteLine(resultado);
                         break;
                     }
-                    case 9: 
-                            break;
-                    default: Console.WriteLine("Opção inválida!");
-                            break;
+                    case 9: {
+                        break;
+                    }
+                    default: {
+                        Console.WriteLine("Opção inválida!");
+                        break;
+                    }
                 }
             } while(opcao != 9);
-
-            
         }
         static Show iniciarDadosShow(){
-            Console.Clear();
+            //Console.Clear();
             Console.WriteLine("Cadastro do Show:");
             Console.Write("Digite o Título do Show: ");
             string titulo = Console.ReadLine();
@@ -105,13 +105,12 @@ namespace ProjetoEventoConsole
             return show;
         }
 
-        static void Teatro(){
+        static void MenuTeatro(){
 
         }
 
-        static void Cinema(){
+        static void MenuCinema(){
 
         }
-
     }
 }
